@@ -5,7 +5,7 @@ class Config(object):
 
     @property
     def SQLALCHEMY_DATABASE_URI(self):
-        value = os.environ.get("DB_URI")
+        value = "postgresql+psycopg2://app:testing@localhost:5432/library_api"
 
         if not value:
             raise ValueError("DB_URI is not set")
